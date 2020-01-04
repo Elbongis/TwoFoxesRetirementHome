@@ -25,8 +25,44 @@ var userSchema = new mongoose.Schema({
 
 var user = mongoose.model('users', userSchema);
 
+var loginSchema = new mongoose.Schema({
+    email    :  String,
+    pword :  String
+});
+
+var login = mongoose.model('logins', loginSchema);
+
+var appSchema = new mongoose.Schema({
+    clientname      :   String,
+    appointmentType :   String,
+    appointmentOther:   String,
+    date            :   Date,
+    location        :   String,
+    notes           :   String
+});
+
+var appointment = mongoose.model('appointments', appSchema);
+
 app.get('/view', function(req,res){
     user.find({}).then(user => res.json(user))
+})
+
+app.get('/viewapps', function(req,res){
+    appointment.find({}).then(appointment => res.json(appointment))
+})
+
+app.post('/insert-app', function(req,res){
+    new appointment({
+        clientname      :   req.body.clientName,
+        appointmentType :   req.body.appointmentType,
+        appointmentOther:   req.body.appointmentOther,
+        date            :   req.body.date,
+        location        :   req.body.location,
+        notes           :   req.body.notes
+    }).save(function(err,doc){
+        if(err) res.json(err);
+        else    res.send("Success");
+    })
 })
 
 app.post('/insert-user', function(req,res){
@@ -39,6 +75,13 @@ app.post('/insert-user', function(req,res){
     }).save(function(err,doc){
         if(err) res.json(err);
         else    res.send("Success");
+    })
+    new login({
+        email   :   req.body.email,
+        pword   :   req.body.pword
+    }).save(function(err,doc){
+        if(err) res.json(err);
+        else    console.log("success");
     })
 });
 

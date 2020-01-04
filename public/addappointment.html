@@ -8,12 +8,10 @@
     <body>
         <div class="maindiv">
             <div class="banner"><h3>Add Appointment</h3></div>
-            <form id="form1">
+            <form id="form1" method="POST" action="insert-app">
             <br />
-                <label for="clientID">Client ID<b>*</b></label>
-                <input type="text" id="clientID" name="clientID" placeholder="Client ID">
-                <label for="employeeID">Employee ID<b>*</b></label>
-                <input type="text" id="employeeID" name="employeeID" placeholder="Employee  ID">
+                <label for="clientName">Client Name<b>*</b></label>
+                <input type="text" id="clientName" name="clientName" placeholder="Client Name">
                 <label for="appointmentType">Appointment Type<b>*</b></label>
                 <select name="appointmentType">
                     <option selected="True">---Select---</option>

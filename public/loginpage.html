@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/checkLoginDetails.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/logincss.css" />
     <head>
         <h1 id="title">Two Foxes Retirement Home</h1>>
@@ -8,13 +9,26 @@
     <body>
     <div id="login">
         <h1> - Log In - </h1>
-        <form id="loginform">
-        <input type="text" placeholder="Username" id="myUsername">
+        <form>
+        <input type="text" placeholder="Username" name="email" id="myUsername">
         <br />
-        <input type="password" placeholder="Password" id="myPassword">
+        <input type="password" placeholder="Password" name="pword" id="myPassword">
         <br />
-        <button id="btnLogin">Login</button>
+        <button type="button" id="btnLogin" onclick="login(this.form);">Login</button>
         </form>
+
+        <script>
+        function login(form){
+            if((form.username.value=="admin") && (form.pword.value=="password")){
+                self.location.href="homepage.html";
+            }
+            else
+            {
+                alert("Incorrect details");
+                return false;
+            }
+        }
+        </script>
     </div>
 </body>
 </html>
