@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Two Foxes Retirement Home</title>
+        <link rel="stylesheet" type="text/css" href="/css/addUserstyle.css"/>
+    </head>
+
+    <body>
+        <div class="maindiv">
+            <div class="banner"><h3>Add Appointment</h3></div>
+            <form id="form1">
+            <br />
+                <label for="clientID">Client ID<b>*</b></label>
+                <input type="text" id="clientID" name="clientID" placeholder="Client ID">
+                <label for="employeeID">Employee ID<b>*</b></label>
+                <input type="text" id="employeeID" name="employeeID" placeholder="Employee  ID">
+                <label for="appointmentType">Appointment Type<b>*</b></label>
+                <select name="appointmentType">
+                    <option selected="True">---Select---</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Caring">Caring</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input type="text" id="appointmentOther" name="appointmentOther" placeholder="Other">
+            
+                <lable for="date">Date<b>*</b></lable>
+                <input type="datetime-local" id="date" name="date" placeholder="Date">
+                <br><br>
+                <label for="location">Location<b>*</b></label>
+                <input type="text" id="location" name="location" placeholder="location">
+
+                <label for="notes">Notes</label>
+                <br />
+                <textarea id="notes" name="notes" rows="4" cols="10" placeholder="Notes"></textarea>
+                <br />
+
+                <center>
+                    <button id="btnBack" href="admindashboard.html">Back</button>
+                    <button id="btnSubmit">Submit</button>
+                </center>
+            </form>
+        </div>
+    </body>
+</html>

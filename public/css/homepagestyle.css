@@ -1,0 +1,33 @@
+head {
+    background-color: rgb(46, 46, 46);
+}
+body {
+    background-color: rgb(46, 46, 46);
+}
+#title {
+    padding:20px 0;
+    font-size:140%;
+    font-weight:300; 
+    text-align:center;
+    color:#fff;
+}
+.logo{
+    background-color: rgb(46, 46, 46);
+}
+#login {
+	width: 100px;
+	background: #555;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+}
+#login:hover{
+  background:#2288bb;
+}

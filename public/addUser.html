@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <link rel="stylesheet" type="text/css" href="/css/addUserstyle.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <head>
+    <title>Two Foxes Retirement Home</title>
+    </head>
+    <body>
+        <div class="maindiv">
+            <div class="banner"><h3>Create a New User</h3></div>
+            <form id="form1" action="/insert-user" method="POST">
+                <h4>New User Details:</h4>
+                <label for="fname">First Name: <b>*</b></label>
+                <input type="text" id="fname" name="firstname" placeholder="Users first name..." requried>
+                <label for="lname">Last Name: <b>*</b></label>
+                <input type="text" id="lname" name="lastname" placeholder="Users last name..." requried>
+                <label for="address">Address: <b>*</b></label>
+                <input type="text" id="add" name="address" placeholder="Users address..." requried>
+                <label for="pcode">Postcode: <b>*</b></label>
+                <input type="text" id="post" name="postcode" placeholder="Users postcode..." requried>
+                <label for="cnum">Contact Number: <b>*</b></label>
+                <input type="text" id="cont" name="contact" placeholder="Users contact number..." requried>
+                <button type="submit" text="Submit" id="btnSubmit">Submit</button>
+                <hr>
+            </form>
+            <form id="login" action="/insert-login" method="POST"></form>
+                <h4>New Account Details:</h4>
+                <label for="email">E-Mail Address: <b>*</b></label>
+                <input type="text" id="email" name="email" placeholder="Users email address..."> 
+                <label for="pass">Password: <b>*</b></label>
+                <input type="password" id="Password" name="pword" placeholder="Users password..."> 
+                <label for="usertype">User Type: <b>*</b></label>
+
+
+                <center>
+                    
+                </center>
+            </form>
+        </div>
+    </body>
+</html>

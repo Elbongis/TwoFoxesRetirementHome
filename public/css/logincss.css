@@ -1,0 +1,80 @@
+#title{ 
+    padding:20px 0;
+    font-size:140%;
+    font-weight:300; 
+    text-align:center;
+    color:#fff;
+}
+
+body {
+    background: #111;
+    font-family:Georgia;
+  }
+
+
+
+  #btnLogin{
+    width:100px;
+    background:#555;
+    display:block;
+    margin:0 auto;
+    margin-top:1%;
+    padding:10px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    cursor:pointer;
+    transition:background .3s;
+    -webkit-transition:background .3s;
+  }
+  
+  #btnLogin:hover{
+    background:#2288bb;
+  }
+
+  #login{
+    width:400px;
+    margin:0 auto;
+    margin-top:8px;
+    margin-bottom:2%;
+    transition:opacity 1s;
+    -webkit-transition:opacity 1s;
+  }
+  
+  
+  #login h1{
+    background:#555;
+    padding:20px 0;
+    font-size:140%;
+    font-weight:300; 
+    text-align:center;
+    color:#fff;
+  
+  }
+
+  form{
+    background:#ffffff;
+    padding:6% 4%;
+  }
+
+  input[type="text"] {
+    width: 92%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 4%;
+    font-family: Georgia;
+    font-size: 95%;
+    color: #555;
+}
+
+input[type="password"] {
+    width: 92%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 4%;
+    font-family: Georgia;
+    font-size: 95%;
+    color: #555;
+}

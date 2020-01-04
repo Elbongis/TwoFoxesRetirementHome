@@ -1,16 +1,17 @@
-var express = require("express");
-var http = require("http");
-
-//init express app
-app = express();
-
-app.use(express.static("static"));
-
-app.get("/", function (req,res){
-    res.send("Hello world");
-})
-
+const http = require("http");
 const port = 3000;
-app.listen(port, function(){
-    console.log("Listening on port " + port);
-})
+const bodyParser = require('body-parser');
+var express = require("express");
+var path = require('path');
+var app = express();
+const router = express.Router();
+
+app.use(express.static('public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
+app.listen(3000);
+console.log("Listening on port 3000");
