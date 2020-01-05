@@ -44,11 +44,11 @@ var appSchema = new mongoose.Schema({
 var appointment = mongoose.model('appointments', appSchema);
 
 app.get('/view', function(req,res){
-    user.find({}).then(user => res.json(user))
+    user.find({}).then(user => res.json(JSON.stringify(user)))
 })
 
 app.get('/viewapps', function(req,res){
-    appointment.find({}).then(appointment => res.json(appointment))
+    appointment.find({}).then(appointment => res.json(JSON.stringify(appointment)))
 })
 
 app.post('/loginuser', function(req,res){
