@@ -62,8 +62,8 @@ app.post('/insert-app', function(req,res){
     }).save(function(err,doc){
         if(err) res.json(err);
         else    res.send("Success");
-    })
-})
+    });
+});
 
 app.post('/insert-user', function(req,res){
     new user({

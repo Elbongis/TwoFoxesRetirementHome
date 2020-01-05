@@ -14,20 +14,11 @@
         <br />
         <input type="password" placeholder="Password" name="pword" id="myPassword">
         <br />
-        <button type="button" id="btnLogin" onclick="login(this.form);">Login</button>
+        <button type="button" id="btnLogin" onclick="window.location='clientdashboard.html'">Login as Client</button>
+        <button type="button" id="btnAdmin" onclick="window.location='admindashboard.html'">Login as Admin</button>
         </form>
 
         <script>
-        function login(form){
-            if((form.username.value=="admin") && (form.pword.value=="password")){
-                self.location.href="homepage.html";
-            }
-            else
-            {
-                alert("Incorrect details");
-                return false;
-            }
-        }
         </script>
     </div>
 </body>

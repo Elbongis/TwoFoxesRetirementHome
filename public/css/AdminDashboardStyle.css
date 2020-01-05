@@ -1,0 +1,126 @@
+﻿  .yui3-skin-sam .redtext {
+            color: #ff0000;
+        }
+
+
+        
+
+        body{
+          background: #111;
+          font-family:Georgia;
+        }
+        
+        .boxes{
+  
+          font-size: 18px;
+          line-height: 1.3em;
+          vertical-align: top;
+          margin-bottom: 1em;
+          border-radius: 0.5em;
+          padding: 1em;
+          
+          box-sizing: border-box;
+          
+          width: 100%;
+		          }
+
+    	.banner {
+			width:100%;
+			background:#555;
+			padding:20px 0;
+			font-size:140%;
+			font-weight:300;
+			text-align:center;
+			color:#fff;
+    	}
+
+        .maindiv {
+            margin-left:50px;
+        margin-right:50px;
+        margin-bottom:50px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding-bottom: 20px;
+        font-family:Georgia;
+
+        }
+
+        .float {
+            background: white; 
+            border: solid #cccccc 1px; 
+            float: left;
+        }
+
+        .half {
+            width: 20%;
+        }
+        .half2 {
+            width: 80%;
+        }
+
+
+
+
+        .accordion {
+    
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+}
+
+.accordion:after {
+    content: '\002B';
+    font-size: large;
+    
+    font-weight: bold;
+    
+}
+
+.active:after {
+    content: "\2212";
+    font-size: large;
+    font-weight: bold;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: lightgray;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel5 {
+    padding: 0 18px;
+    background-color: lightgray;
+    
+    
+    
+}
+
+.background{
+  background:#ffffff;
+  padding:6% 4%;
+}
+
+input[type="submit"]{
+  background:#555;
+  border:0;
+  font-family:Georgia;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+input[type="submit"]:hover{
+  background:#2288bb;

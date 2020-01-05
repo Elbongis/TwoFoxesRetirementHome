@@ -32,6 +32,25 @@ body {
     background:#2288bb;
   }
 
+  #btnAdmin{
+    width:100px;
+    background:#555;
+    display:block;
+    margin:0 auto;
+    margin-top:1%;
+    padding:10px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    cursor:pointer;
+    transition:background .3s;
+    -webkit-transition:background .3s;
+  }
+  
+  #btnAdmin:hover{
+    background:#2288bb;
+  }
+
   #login{
     width:400px;
     margin:0 auto;
