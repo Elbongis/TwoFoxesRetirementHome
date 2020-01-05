@@ -9,13 +9,12 @@
     <body>
     <div id="login">
         <h1> - Log In - </h1>
-        <form>
+        <form method="POST" action="/loginuser">
         <input type="text" placeholder="Username" name="email" id="myUsername">
         <br />
         <input type="password" placeholder="Password" name="pword" id="myPassword">
         <br />
-        <button type="button" id="btnLogin" onclick="window.location='clientdashboard.html'">Login as Client</button>
-        <button type="button" id="btnAdmin" onclick="window.location='admindashboard.html'">Login as Admin</button>
+        <button type="submit" id="btnLogin">Login</button>
         </form>
 
         <script>

@@ -51,6 +51,27 @@ app.get('/viewapps', function(req,res){
     appointment.find({}).then(appointment => res.json(appointment))
 })
 
+app.post('/loginuser', function(req,res){
+    var email = req.body.email;
+    var pword = req.body.pword;
+
+    if(email == "admin" && pword == "password"){
+        res.redirect('/admindashboard.html');
+    } else {
+    login.findOne({email: email, pword: pword}, function(err, user) {
+        if(err) {
+            console.log(err);
+            return res.status(500).send();
+        }
+
+        if(!user){
+            return res.status(404).send();
+        }
+
+        res.redirect('/clientdashboard.html');
+    });
+}});
+
 app.post('/insert-app', function(req,res){
     new appointment({
         clientname      :   req.body.clientName,
