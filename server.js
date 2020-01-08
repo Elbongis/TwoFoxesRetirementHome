@@ -12,9 +12,9 @@ app.use(express.static('public'));
 app.use(methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+//Connect to database
 mongoose.connect('mongodb://localhost/TwoFoxes', { useNewUrlParser: true }, { useUnifiedTopology: true });
-
+//User Schema
 var userSchema = new mongoose.Schema({
     firstname : String,
     lastname : String,
@@ -22,16 +22,16 @@ var userSchema = new mongoose.Schema({
     postcode : String,
     contact : Number
 });
-
+//Declare user schema
 var user = mongoose.model('users', userSchema);
-
+//Login schema
 var loginSchema = new mongoose.Schema({
     email    :  String,
     pword :  String
 });
-
+//Declare login schema
 var login = mongoose.model('logins', loginSchema);
-
+//Appointment schema
 var appSchema = new mongoose.Schema({
     clientname      :   String,
     appointmentType :   String,
@@ -40,17 +40,17 @@ var appSchema = new mongoose.Schema({
     location        :   String,
     notes           :   String
 });
-
+//Declare appointment schema
 var appointment = mongoose.model('appointments', appSchema);
-
+//get all users and display them to the user
 app.get('/view', function(req,res){
     user.find({}).then(user => res.json(JSON.stringify(user)))
 })
-
+//get all appointments and display them to the user
 app.get('/viewapps', function(req,res){
     appointment.find({}).then(appointment => res.json(JSON.stringify(appointment)))
 })
-
+//get login information, cross reference db then log user in
 app.post('/loginuser', function(req,res){
     var email = req.body.email;
     var pword = req.body.pword;
@@ -71,7 +71,7 @@ app.post('/loginuser', function(req,res){
         res.redirect('/clientdashboard.html');
     });
 }});
-
+//get appointment data from form and input into database
 app.post('/insert-app', function(req,res){
     new appointment({
         clientname      :   req.body.clientName,
@@ -85,7 +85,7 @@ app.post('/insert-app', function(req,res){
         else    res.send("Success");
     });
 });
-
+//get user data from form and input into database
 app.post('/insert-user', function(req,res){
     new user({
        firstname    : req.body.firstname,
