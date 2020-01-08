@@ -1,8 +1,4 @@
 ﻿
-
-
-        
-
         body{
           background: #111;
           font-family:Georgia;
@@ -75,3 +71,4 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
   background:#2288bb;
+}
